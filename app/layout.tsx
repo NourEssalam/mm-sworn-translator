@@ -5,23 +5,22 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Monia Mhamdi | Arabic–English Sworn Translator',
   description: 'Ministry of Justice-accredited Arabic–English sworn translation, court interpretation and language services in Bou Salem, Jendouba, Tunisia.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/LM-favcion.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/DM-favcion.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      //{
+        //url: '/DM-navy-512_512.svg',
+        //type: 'image/svg+xml',
+      //},
     ],
-    apple: '/apple-icon.png',
+    //apple: '/apple-icon.png',
   },
 }
 
