@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+
+# Next.js build output
+.next
+out
+
+# Build artifacts
+build
+dist
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package manager
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Editor/OS files
+.DS_Store
+.vscode
+.idea
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Coverage
+coverage
+
+# Misc generated
+.turbo
+.vercel
