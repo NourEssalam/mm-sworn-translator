@@ -363,16 +363,42 @@ h2 em {
   width: 19px;
 }
 .training {
-  margin-top: 23px;
-  border-top: 1px solid var(--line);
-  padding-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  font: 16px "Cormorant Garamond";
+  margin-top: 20px;
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #e8e3d5;
+  background: #fdfbf5;
 }
-.training span + span {
-  font-size: 13px;
+.training-icon {
+  color: #be8b12;
+}
+.training-copy {
+  border-left: 1px solid #d9c98e;
+  padding-left: 15px;
+}
+.training-copy h3 {
+  margin: 0 0 3px;
+  color: var(--navy);
+  font: 600 20px/1.15 'Cormorant Garamond';
+}
+.training-copy p {
+  margin: 0;
+  color: #657080;
+  font:
+    19px/1.55 Inter,
+    Arial,
+    sans-serif;
+}
+.training-audiences {
   color: #777;
+  font:
+    17px/1.45 Inter,
+    Arial,
+    sans-serif;
+  white-space: nowrap;
 }
 .proof {
   padding-top: 0;
@@ -727,6 +753,18 @@ h2 em {
   }
   .service-card {
     min-height: 205px;
+  }
+  .training {
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 10px 12px;
+    padding: 13px 14px;
+  }
+  .training-copy {
+    padding-left: 12px;
+  }
+  .training-audiences {
+    grid-column: 2;
+    white-space: normal;
   }
   .service-icon {
     margin-bottom: 25px;
