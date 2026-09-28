@@ -9,7 +9,7 @@
   --color-parchment: #fbf5e0;
   --color-warm: #f5f4f0;
   --color-dusk: #1c3b6e;
-
+  --color-gold-bright: #e6bb43;
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Inter', Arial, sans-serif;
 }
@@ -63,161 +63,12 @@ h2 em {
   padding: 86px 0;
 }
 
-.section-heading h2,
 .about h2,
 .confidence-grid h2,
 .faq h2,
 .final-cta h2 {
   font-size: 48px;
   line-height: 0.98;
-}
-
-.section-heading > p {
-  font: 20px/1.6 'Cormorant Garamond';
-  color: #5e6875;
-  max-width: 390px;
-  margin: 14px 0;
-}
-
-.split {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
-
-.split p {
-  border-left: 1px solid var(--gold);
-  padding-left: 18px;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 54px;
-}
-
-.step {
-  position: relative;
-  display: flex;
-  gap: 17px;
-  align-items: center;
-  padding-right: 44px;
-}
-
-.step + .step {
-  padding-left: 36px;
-  border-left: 1px solid var(--line);
-}
-
-.step-num {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #f4e1a9;
-  display: grid;
-  place-items: center;
-  font: 600 17px 'Cormorant Garamond';
-  flex: none;
-}
-
-.step h3,
-.service-card h3,
-.proof-grid h3 {
-  font: 600 22px 'Cormorant Garamond';
-  margin: 0 0 4px;
-}
-
-.step p,
-.service-card p,
-.proof-grid p {
-  font: 19px/1.6 'Cormorant Garamond';
-  margin: 0;
-  color: #576273;
-}
-
-.step-arrow {
-  position: absolute;
-  right: 9px;
-  color: #be8b12;
-}
-
-.services {
-  background: #fff;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 36px;
-}
-
-.service-card {
-  border: 1px solid #d9d9d4;
-  padding: 24px 21px 20px;
-  min-height: 235px;
-  position: relative;
-}
-
-.service-icon {
-  color: #be8b12;
-  margin-bottom: 32px;
-}
-
-.service-card h3 {
-  font-size: 22px;
-  line-height: 1.02;
-  max-width: 170px;
-}
-
-.service-card p {
-  font-size: 19px;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-
-.training {
-  margin-top: 20px;
-  padding: 14px 18px;
-  display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 15px;
-  border: 1px solid #e8e3d5;
-  background: #fdfbf5;
-}
-
-.training-icon {
-  color: #be8b12;
-}
-
-.training-copy {
-  border-left: 1px solid #d9c98e;
-  padding-left: 15px;
-}
-
-.training-copy h3 {
-  margin: 0 0 3px;
-  color: var(--navy);
-  font: 600 20px/1.15 'Cormorant Garamond';
-}
-
-.training-copy p {
-  margin: 0;
-  color: #657080;
-  font:
-    16px/1.5 Inter,
-    Arial,
-    sans-serif;
-}
-
-.training-audiences {
-  color: #777;
-  font:
-    14px/1.45 Inter,
-    Arial,
-    sans-serif;
-  white-space: nowrap;
 }
 
 .proof {
@@ -250,7 +101,15 @@ h2 em {
   margin-bottom: 14px;
 }
 
+.proof-grid h3 {
+  font: 600 22px 'Cormorant Garamond';
+  margin: 0 0 4px;
+}
+
 .proof-grid p {
+  font: 19px/1.6 'Cormorant Garamond';
+  margin: 0;
+  color: #576273;
   font-size: 19px;
 }
 
@@ -523,7 +382,6 @@ h2 em {
     padding: 65px 0;
   }
 
-  .section-heading h2,
   .about h2,
   .confidence-grid h2,
   .faq h2,
@@ -531,65 +389,8 @@ h2 em {
     font-size: 43px;
   }
 
-  .split {
-    display: block;
-  }
-
-  .split p {
-    margin-top: 22px;
-  }
-
-  .steps,
-  .service-grid,
   .proof-grid {
     grid-template-columns: 1fr;
-  }
-
-  .steps {
-    gap: 0;
-    margin-top: 35px;
-  }
-
-  .step,
-  .step + .step {
-    padding: 20px 40px 20px 0;
-    border-left: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .step-arrow {
-    right: 5px;
-  }
-
-  .service-grid {
-    gap: 12px;
-  }
-
-  .service-card {
-    min-height: 205px;
-  }
-
-  .training {
-    grid-template-columns: 22px minmax(0, 1fr);
-    gap: 8px 12px;
-    padding: 12px 14px;
-  }
-
-  .training-copy {
-    padding-left: 12px;
-  }
-
-  .training-copy p {
-    font-size: 15px;
-  }
-
-  .training-audiences {
-    grid-column: 2;
-    white-space: normal;
-  }
-
-  .service-icon {
-    margin-bottom: 25px;
   }
 
   .proof-panel {
@@ -646,10 +447,6 @@ h2 em {
 @media (min-width: 801px) and (max-width: 1050px) {
   .container {
     width: calc(100% - 48px);
-  }
-
-  .service-card {
-    padding: 19px 15px;
   }
 
   .proof-panel {

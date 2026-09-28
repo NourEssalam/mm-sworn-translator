@@ -12,6 +12,16 @@ export const navLinks = [
   ['#faq', 'FAQ'],
 ] as const;
 
+export const steps: [string, string, string][] = [
+  ['01', 'Send Your Documents', 'Send the documents through WhatsApp.'],
+  ['02', 'Receive Your Quote', 'Pricing and expected turnaround.'],
+  [
+    '03',
+    'Receive Your Translation',
+    'Certified Arabic–English translation delivered as agreed.',
+  ],
+];
+
 export const services = [
   {
     title: 'Legal & Corporate',

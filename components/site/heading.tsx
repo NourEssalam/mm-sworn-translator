@@ -33,3 +33,15 @@ export function Accent({ className, ...props }: React.ComponentProps<'em'>) {
     <em className={cn('text-parchment not-italic', className)} {...props} />
   );
 }
+
+export function Lede({ className, ...props }: React.ComponentProps<'p'>) {
+  return (
+    <p
+      className={cn(
+        'my-3.5 max-w-96 font-serif text-xl leading-relaxed text-slate-500',
+        className,
+      )}
+      {...props}
+    />
+  );
+}

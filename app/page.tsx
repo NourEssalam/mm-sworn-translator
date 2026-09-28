@@ -4,7 +4,6 @@ import { useState } from 'react';
 import {
   ArrowRight,
   ChevronDown,
-  GraduationCap,
   MapPin,
   MessageCircle,
   ShieldCheck,
@@ -12,10 +11,12 @@ import {
 import { Header } from '@/components/site/header';
 import { Hero } from '@/components/site/hero';
 import { TrustStrip } from '@/components/site/trust-strip';
+import { Process } from '@/components/site/process';
+import { Services } from '@/components/site/services';
 import { Brand } from '@/components/site/brand';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { QuoteButton } from '@/components/site/quote-button';
-import { MAPS_URL, WHATSAPP_URL, faqs, services } from '@/lib/data';
+import { MAPS_URL, WHATSAPP_URL, faqs } from '@/lib/data';
 
 export default function Page() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -24,86 +25,8 @@ export default function Page() {
       <Header />
       <Hero />
       <TrustStrip />
-
-      <section className="section process" id="process">
-        <div className="container">
-          <div className="section-heading split">
-            <div>
-              <Eyebrow>How It Works</Eyebrow>
-              <h2>A simple, secure process.</h2>
-            </div>
-            <p>
-              From your first message
-              <br />
-              to your certified document.
-            </p>
-          </div>
-          <div className="steps">
-            {[
-              [
-                '01',
-                'Send Your Documents',
-                'Send the documents through WhatsApp.',
-              ],
-              ['02', 'Receive Your Quote', 'Pricing and expected turnaround.'],
-              [
-                '03',
-                'Receive Your Translation',
-                'Certified Arabic–English translation delivered as agreed.',
-              ],
-            ].map(([num, title, text], i) => (
-              <div className="step" key={num}>
-                <span className="step-num">{num}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-                {i < 2 && <ArrowRight className="step-arrow" />}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section services" id="services">
-        <div className="container">
-          <div className="section-heading">
-            <Eyebrow>Our Services</Eyebrow>
-            <h2>Translation &amp; language services</h2>
-            <p>
-              Professional Arabic–English support for official, legal and
-              professional needs.
-            </p>
-          </div>
-          <div className="service-grid">
-            {services.map(({ title, text, icon: Icon }) => (
-              <article className="service-card" key={title}>
-                <Icon className="service-icon" size={28} />
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-          <div className="training">
-            <GraduationCap
-              className="training-icon"
-              size={22}
-              aria-hidden="true"
-            />
-            <div className="training-copy">
-              <h3>English Language Training</h3>
-              <p>
-                Practical English training for students and professionals,
-                including exam preparation, interview preparation and workplace
-                communication.
-              </p>
-            </div>
-            <span className="training-audiences">
-              Private · Group · Professional
-            </span>
-          </div>
-        </div>
-      </section>
+      <Process />
+      <Services />
 
       <section className="section proof">
         <div className="container">
