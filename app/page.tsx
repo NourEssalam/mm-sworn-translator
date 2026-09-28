@@ -11,6 +11,7 @@ import {
   Menu,
   MessageCircle,
   ShieldCheck,
+  GraduationCap,
   X,
 } from 'lucide-react';
 
@@ -297,8 +298,22 @@ export default function Page() {
             ))}
           </div>
           <div className="training">
-            <span>English Language Training</span>
-            <span>Private · Group · Professional</span>
+            <GraduationCap
+              className="training-icon"
+              size={22}
+              aria-hidden="true"
+            />
+            <div className="training-copy">
+              <h3>English Language Training</h3>
+              <p>
+                Practical English training for students and professionals,
+                including exam preparation, interview preparation and workplace
+                communication.
+              </p>
+            </div>
+            <span className="training-audiences">
+              Private · Group · Professional
+            </span>
           </div>
         </div>
       </section>
