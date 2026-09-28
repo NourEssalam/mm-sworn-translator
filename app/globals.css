@@ -41,64 +41,8 @@ body {
   margin: auto;
 }
 
-.site-header {
-  height: 76px;
-  background: var(--warm);
-  border-bottom: 1px solid #dfddd6;
-  position: relative;
-  z-index: 5;
-}
-.header-inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.desktop-nav {
-  display: flex;
-  gap: 32px;
-  margin-left: auto;
-  margin-right: 34px;
-  font-size: 17px;
-}
-.desktop-nav a:hover,
 .text-link:hover {
   color: var(--gold);
-}
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.language {
-  font-size: 16px;
-}
-.language span {
-  color: #b5b1a7;
-  margin: 0 6px;
-}
-.language b {
-  font-weight: 600;
-}
-.header-whatsapp {
-  background: var(--navy);
-  color: #fff;
-  padding: 11px 15px;
-  border-radius: 6px;
-  font-size: 17px;
-  display: flex;
-  gap: 7px;
-  align-items: center;
-}
-.menu-button {
-  display: none;
-  background: none;
-  border: 0;
-  color: var(--navy);
-}
-.mobile-nav {
-  display: none;
 }
 .hero {
   background: var(--navy);
@@ -599,28 +543,6 @@ h2 em {
   .container {
     width: min(100% - 40px, 600px);
   }
-  .site-header {
-    height: 68px;
-  }
-  .desktop-nav,
-  .header-whatsapp {
-    display: none;
-  }
-  .menu-button {
-    display: block;
-    padding: 3px;
-  }
-  .mobile-nav {
-    display: flex;
-    flex-direction: column;
-    background: var(--warm);
-    border-bottom: 1px solid var(--line);
-    padding: 10px 20px;
-  }
-  .mobile-nav a {
-    padding: 13px 0;
-    font-size: 17px;
-  }
   .hero,
   .hero-grid {
     min-height: 0;
@@ -762,10 +684,6 @@ h2 em {
 @media (min-width: 801px) and (max-width: 1050px) {
   .container {
     width: calc(100% - 48px);
-  }
-  .desktop-nav {
-    gap: 15px;
-    margin-right: 16px;
   }
   .service-card {
     padding: 19px 15px;

@@ -7,72 +7,20 @@ import {
   ChevronDown,
   GraduationCap,
   MapPin,
-  Menu,
   MessageCircle,
   ShieldCheck,
-  X,
 } from 'lucide-react';
-
+import { Header } from '@/components/site/header';
 import { Brand } from '@/components/site/brand';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { QuoteButton } from '@/components/site/quote-button';
 import { MAPS_URL, WHATSAPP_URL, faqs, services } from '@/lib/data';
 
 export default function Page() {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
-  const closeMenu = () => setMobileOpen(false);
   return (
     <main id="top">
-      <header className="site-header">
-        <div className="container header-inner">
-          <Brand />
-          <nav className="desktop-nav" aria-label="Main navigation">
-            <a href="#services">Services</a>
-            <a href="#process">How It Works</a>
-            <a href="#about">About</a>
-            <a href="#faq">FAQ</a>
-          </nav>
-          <div className="header-actions">
-            <a href="#" className="language">
-              AR <span>|</span> <b>EN</b>
-            </a>
-            <a
-              className="header-whatsapp"
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MessageCircle size={16} /> WhatsApp
-            </a>
-            <button
-              className="menu-button"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-              aria-expanded={mobileOpen}
-            >
-              {mobileOpen ? <X /> : <Menu />}
-            </button>
-          </div>
-        </div>
-        {mobileOpen && (
-          <nav className="mobile-nav">
-            <a href="#services" onClick={closeMenu}>
-              Services
-            </a>
-            <a href="#process" onClick={closeMenu}>
-              How It Works
-            </a>
-            <a href="#about" onClick={closeMenu}>
-              About
-            </a>
-            <a href="#faq" onClick={closeMenu}>
-              FAQ
-            </a>
-          </nav>
-        )}
-      </header>
-
+      <Header />
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">

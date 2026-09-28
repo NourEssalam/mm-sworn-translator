@@ -5,6 +5,13 @@ export const WHATSAPP_URL =
 export const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=Bou+Salem%2C+Jendouba%2C+Tunisia';
 
+export const navLinks = [
+  ['#services', 'Services'],
+  ['#process', 'How It Works'],
+  ['#about', 'About'],
+  ['#faq', 'FAQ'],
+] as const;
+
 export const services = [
   {
     title: 'Legal & Corporate',
