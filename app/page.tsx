@@ -1,7 +1,4 @@
-'use client';
-
-import { useState } from 'react';
-import { ArrowRight, ChevronDown, MapPin, MessageCircle } from 'lucide-react';
+import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
 import { Header } from '@/components/site/header';
 import { Hero } from '@/components/site/hero';
 import { TrustStrip } from '@/components/site/trust-strip';
@@ -13,10 +10,10 @@ import { Proof } from '@/components/site/proof';
 import { Brand } from '@/components/site/brand';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { QuoteButton } from '@/components/site/quote-button';
-import { MAPS_URL, faqs } from '@/lib/data';
+import { MAPS_URL } from '@/lib/data';
+import { Faq } from '@/components/site/faq';
 
 export default function Page() {
-  const [openFaq, setOpenFaq] = useState(0);
   return (
     <main id="top">
       <Header />
@@ -28,40 +25,7 @@ export default function Page() {
       <Proof />
       <About />
       <Confidentiality />
-
-      <section className="section faq" id="faq">
-        <div className="container faq-grid">
-          <div>
-            <Eyebrow>Frequently Asked Questions</Eyebrow>
-            <h2>
-              Questions,
-              <br />
-              <em>answered.</em>
-            </h2>
-            <p>Everything you need to know before sending your documents.</p>
-          </div>
-          <div className="faq-list">
-            {faqs.map(([question, answer], i) => (
-              <div
-                className={`faq-item ${openFaq === i ? 'is-open' : ''}`}
-                key={question}
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
-                  aria-expanded={openFaq === i}
-                  aria-controls={`faq-answer-${i}`}
-                >
-                  <span>{question}</span>
-                  <ChevronDown size={18} />
-                </button>
-                <div id={`faq-answer-${i}`} className="faq-answer">
-                  <p>{answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Faq />
 
       <section className="final-cta">
         <div className="container final-inner">
