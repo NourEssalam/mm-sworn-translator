@@ -3,6 +3,17 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
+@theme {
+  --color-navy: #0a1931;
+  --color-gold: #c8a828;
+  --color-parchment: #fbf5e0;
+  --color-warm: #f5f4f0;
+  --color-dusk: #1c3b6e;
+
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', Arial, sans-serif;
+}
+
 :root {
   --navy: #0a1931;
   --gold: #c8a828;
@@ -13,9 +24,7 @@
   --charcoal: #3a3a3a;
   --line: #dcd9d0;
 }
-* {
-  box-sizing: border-box;
-}
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,17 +34,12 @@ body {
   color: var(--navy);
   font-family: Inter, Arial, sans-serif;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
-button {
-  font: inherit;
-}
+
 .container {
   width: min(1180px, calc(100% - 64px));
   margin: auto;
 }
+
 .site-header {
   height: 76px;
   background: var(--warm);
@@ -354,15 +358,7 @@ h2 em {
   line-height: 1.6;
   margin-top: 10px;
 }
-.service-card > a {
-  position: absolute;
-  bottom: 16px;
-  left: 20px;
-  color: #b58008;
-}
-.service-card > a svg {
-  width: 19px;
-}
+
 .training {
   margin-top: 20px;
   padding: 14px 18px;
