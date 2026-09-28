@@ -1,22 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  ArrowRight,
-  ChevronDown,
-  MapPin,
-  MessageCircle,
-  ShieldCheck,
-} from 'lucide-react';
+import { ArrowRight, ChevronDown, MapPin, MessageCircle } from 'lucide-react';
 import { Header } from '@/components/site/header';
 import { Hero } from '@/components/site/hero';
 import { TrustStrip } from '@/components/site/trust-strip';
 import { Process } from '@/components/site/process';
 import { Services } from '@/components/site/services';
+import { About } from '@/components/site/about';
+import { Confidentiality } from '@/components/site/confidentiality';
+import { Proof } from '@/components/site/proof';
 import { Brand } from '@/components/site/brand';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { QuoteButton } from '@/components/site/quote-button';
-import { MAPS_URL, WHATSAPP_URL, faqs } from '@/lib/data';
+import { MAPS_URL, faqs } from '@/lib/data';
 
 export default function Page() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -28,90 +25,9 @@ export default function Page() {
       <Process />
       <Services />
 
-      <section className="section proof">
-        <div className="container">
-          <div className="proof-panel">
-            <Eyebrow>Why Monia</Eyebrow>
-            <h2>
-              Official expertise.
-              <br />
-              Human attention.
-            </h2>
-            <div className="proof-grid">
-              {[
-                [
-                  'Official',
-                  'Ministry of Justice-accredited Sworn Translator.',
-                ],
-                [
-                  'Experienced',
-                  'Court interpretation and legal document experience.',
-                ],
-                [
-                  'Precise',
-                  'Terminology-conscious Arabic–English translation.',
-                ],
-                ['Confidential', 'Sensitive documents handled professionally.'],
-              ].map(([title, text]) => (
-                <div key={title}>
-                  <ShieldCheck size={24} />
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section about" id="about">
-        <div className="container about-grid">
-          <div className="portrait" />
-          <div className="about-copy">
-            <Eyebrow>About Monia</Eyebrow>
-            <h2>Monia Mhamdi</h2>
-            <p className="lead">
-              Sworn Translator · Court Interpreter · English Language Trainer
-            </p>
-            <p>
-              Ministry of Justice accredited, with a Master&apos;s degree in
-              English Language and years of professional experience serving
-              individuals, families and organizations.
-            </p>
-            <ul>
-              <li>Ministry of Justice Accredited</li>
-              <li>Master&apos;s Degree in English Language</li>
-              <li>Court Interpreter — Court of First Instance of Jendouba</li>
-            </ul>
-            <a
-              className="text-link"
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View credentials <ArrowRight size={16} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="section confidentiality">
-        <div className="container confidence-grid">
-          <div className="document-image" />
-          <div>
-            <Eyebrow>Confidentiality &amp; Trust</Eyebrow>
-            <h2>Your documents are handled with care.</h2>
-            <p>
-              Legal, immigration and personal documents require discretion.
-              Every document is handled professionally and confidentially.
-            </p>
-            <div className="gold-rule" />
-            <small>
-              Professional confidentiality · Secure document handling
-            </small>
-          </div>
-        </div>
-      </section>
+      <Proof />
+      <About />
+      <Confidentiality />
 
       <section className="section faq" id="faq">
         <div className="container faq-grid">

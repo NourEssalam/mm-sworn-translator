@@ -45,6 +45,13 @@ export const services = [
   },
 ];
 
+export const proofPoints: [string, string][] = [
+  ['Official', 'Ministry of Justice-accredited Sworn Translator.'],
+  ['Experienced', 'Court interpretation and legal document experience.'],
+  ['Precise', 'Terminology-conscious Arabic–English translation.'],
+  ['Confidential', 'Sensitive documents handled professionally.'],
+];
+
 export const faqs: [string, string][] = [
   [
     'What is a sworn translation?',
