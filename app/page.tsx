@@ -5,108 +5,18 @@ import {
   ArrowRight,
   Check,
   ChevronDown,
-  FileText,
-  Globe2,
+  GraduationCap,
   MapPin,
   Menu,
   MessageCircle,
   ShieldCheck,
-  GraduationCap,
   X,
 } from 'lucide-react';
 
-const WHATSAPP_URL =
-  'https://wa.me/21693012617?text=Hello%20Monia%2C%20I%27d%20like%20to%20request%20a%20quote.';
-const MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Bou+Salem%2C+Jendouba%2C+Tunisia';
-
-const services = [
-  {
-    title: 'Legal & Corporate',
-    text: 'Contracts, agreements, legal and official documents.',
-    icon: FileText,
-  },
-  {
-    title: 'Immigration & Certified Documents',
-    text: 'Civil-status documents, diplomas, transcripts and immigration paperwork.',
-    icon: Globe2,
-  },
-  {
-    title: 'Legalization & Rush',
-    text: 'Apostille and legalization assistance with urgent translation requests.',
-    icon: ShieldCheck,
-  },
-  {
-    title: 'Court & Legal Interpretation',
-    text: 'Arabic–English interpretation for courts, legal meetings and official settings.',
-    icon: MessageCircle,
-  },
-];
-
-const faqs = [
-  [
-    'What is a sworn translation?',
-    'A sworn translation is an official translation prepared and signed by a Ministry of Justice-accredited translator.',
-  ],
-  [
-    'Will my translation be accepted by an embassy or official authority?',
-    'Requirements vary by institution. Monia can help you prepare the documents in the format commonly requested by authorities.',
-  ],
-  [
-    'How long does a translation take?',
-    'Timing depends on the document type, length and urgency. You will receive an expected turnaround with your quote.',
-  ],
-  [
-    'How do I send my documents?',
-    'Send clear photos or scans through WhatsApp to begin the review.',
-  ],
-  [
-    'Do you offer urgent translation?',
-    'Urgent requests can be discussed based on availability and document complexity.',
-  ],
-  [
-    'Can you assist with legalization or Apostille?',
-    'Yes. Assistance is available for Apostille and legalization-related steps.',
-  ],
-  [
-    'Is my document confidential?',
-    'Yes. Documents are handled professionally and with strict confidentiality.',
-  ],
-];
-
-function Brand({ light = false }: { light?: boolean }) {
-  return (
-    <a
-      href="#top"
-      className={`brand ${light ? 'brand-light' : ''}`}
-      aria-label="Monia Mhamdi home"
-    >
-      <span className="brand-mark">M</span>
-      <span>
-        <strong>Monia Mhamdi</strong>
-        <small>
-          Sworn Translator · <b dir="rtl">مترجمة محلفة</b>
-        </small>
-      </span>
-    </a>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p className="eyebrow">{children}</p>;
-}
-function QuoteButton({ compact = false }: { compact?: boolean }) {
-  return (
-    <a
-      className={`button button-gold ${compact ? 'button-compact' : ''}`}
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <MessageCircle size={17} /> Get Your Quote <ArrowRight size={16} />
-    </a>
-  );
-}
+import { Brand } from '@/components/site/brand';
+import { Eyebrow } from '@/components/site/eyebrow';
+import { QuoteButton } from '@/components/site/quote-button';
+import { MAPS_URL, WHATSAPP_URL, faqs, services } from '@/lib/data';
 
 export default function Page() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -166,7 +76,7 @@ export default function Page() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <SectionLabel>Sworn Translator · Court Interpreter</SectionLabel>
+            <Eyebrow>Sworn Translator · Court Interpreter</Eyebrow>
             <h1>
               Arabic &#8596; English
               <br />
@@ -234,7 +144,7 @@ export default function Page() {
         <div className="container">
           <div className="section-heading split">
             <div>
-              <SectionLabel>How It Works</SectionLabel>
+              <Eyebrow>How It Works</Eyebrow>
               <h2>A simple, secure process.</h2>
             </div>
             <p>
@@ -273,7 +183,7 @@ export default function Page() {
       <section className="section services" id="services">
         <div className="container">
           <div className="section-heading">
-            <SectionLabel>Our Services</SectionLabel>
+            <Eyebrow>Our Services</Eyebrow>
             <h2>Translation &amp; language services</h2>
             <p>
               Professional Arabic–English support for official, legal and
@@ -313,7 +223,7 @@ export default function Page() {
       <section className="section proof">
         <div className="container">
           <div className="proof-panel">
-            <SectionLabel>Why Monia</SectionLabel>
+            <Eyebrow>Why Monia</Eyebrow>
             <h2>
               Official expertise.
               <br />
@@ -350,7 +260,7 @@ export default function Page() {
         <div className="container about-grid">
           <div className="portrait" />
           <div className="about-copy">
-            <SectionLabel>About Monia</SectionLabel>
+            <Eyebrow>About Monia</Eyebrow>
             <h2>Monia Mhamdi</h2>
             <p className="lead">
               Sworn Translator · Court Interpreter · English Language Trainer
@@ -381,7 +291,7 @@ export default function Page() {
         <div className="container confidence-grid">
           <div className="document-image" />
           <div>
-            <SectionLabel>Confidentiality &amp; Trust</SectionLabel>
+            <Eyebrow>Confidentiality &amp; Trust</Eyebrow>
             <h2>Your documents are handled with care.</h2>
             <p>
               Legal, immigration and personal documents require discretion.
@@ -398,7 +308,7 @@ export default function Page() {
       <section className="section faq" id="faq">
         <div className="container faq-grid">
           <div>
-            <SectionLabel>Frequently Asked Questions</SectionLabel>
+            <Eyebrow>Frequently Asked Questions</Eyebrow>
             <h2>
               Questions,
               <br />
@@ -432,7 +342,7 @@ export default function Page() {
       <section className="final-cta">
         <div className="container final-inner">
           <div>
-            <SectionLabel>Ready to get started?</SectionLabel>
+            <Eyebrow>Ready to get started?</Eyebrow>
             <h2>
               Need an Arabic–English
               <br />
@@ -455,7 +365,7 @@ export default function Page() {
             </p>
           </div>
           <div className="footer-contact">
-            <SectionLabel>Contact</SectionLabel>
+            <Eyebrow className="mb-4">Contact</Eyebrow>
             <p>
               <MapPin size={16} /> Bou Salem, Jendouba, Tunisia
             </p>
