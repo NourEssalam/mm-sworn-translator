@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import {
   ArrowRight,
-  Check,
   ChevronDown,
   GraduationCap,
   MapPin,
@@ -11,6 +10,8 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { Header } from '@/components/site/header';
+import { Hero } from '@/components/site/hero';
+import { TrustStrip } from '@/components/site/trust-strip';
 import { Brand } from '@/components/site/brand';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { QuoteButton } from '@/components/site/quote-button';
@@ -21,72 +22,8 @@ export default function Page() {
   return (
     <main id="top">
       <Header />
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <Eyebrow>Sworn Translator · Court Interpreter</Eyebrow>
-            <h1>
-              Arabic &#8596; English
-              <br />
-              <em>Sworn Translation</em>
-            </h1>
-            <p className="hero-sub">
-              Ministry of Justice-accredited translation for legal, immigration
-              and official documents.
-            </p>
-            <div className="hero-meta">
-              <span>
-                <ShieldCheck size={21} /> Ministry of Justice
-                <br />
-                <b>Accredited</b>
-              </span>
-              <span>
-                <MapPin size={21} /> Bou Salem, Jendouba,
-                <br />
-                <b>Tunisia</b>
-              </span>
-            </div>
-            <div className="hero-actions">
-              <QuoteButton />
-              <a
-                className="button button-outline"
-                href={MAPS_URL}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <MapPin size={17} /> Get Directions <ArrowRight size={16} />
-              </a>
-            </div>
-            <div className="hero-proof">
-              <span>
-                <Check /> Arabic ↔ English
-              </span>
-              <span>
-                <Check /> Confidential
-              </span>
-              <span>
-                <Check /> Professional
-              </span>
-            </div>
-          </div>
-          <div
-            className="hero-visual"
-            aria-label="Professional translation workspace"
-          />
-        </div>
-      </section>
-
-      <section className="trust-strip">
-        <div className="container trust-items">
-          <span>Ministry of Justice Accredited</span>
-          <i />
-          <span>Court Interpreter</span>
-          <i />
-          <span>Arabic–English</span>
-          <i />
-          <span>Bou Salem · Jendouba</span>
-        </div>
-      </section>
+      <Hero />
+      <TrustStrip />
 
       <section className="section process" id="process">
         <div className="container">
