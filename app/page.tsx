@@ -286,14 +286,14 @@ export default function Page() {
                 <Icon className="service-icon" size={28} />
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <a
+                {/*<a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`Ask about ${title}`}
                 >
                   <ArrowRight />
-                </a>
+                </a>*/}
               </article>
             ))}
           </div>
