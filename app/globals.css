@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 :root {
   --navy: #0a1931;
@@ -62,11 +62,11 @@ button {
   display: grid;
   place-items: center;
   color: var(--gold);
-  font: 700 29px "Cormorant Garamond";
+  font: 700 29px 'Cormorant Garamond';
   position: relative;
 }
 .brand-mark:after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 4px;
   border: 1px solid #d9c47b;
@@ -74,12 +74,12 @@ button {
 }
 .brand strong {
   display: block;
-  font: 600 25px "Cormorant Garamond";
+  font: 600 25px 'Cormorant Garamond';
   letter-spacing: -0.02em;
 }
 .brand small {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.01em;
 }
 .brand small b {
@@ -90,7 +90,7 @@ button {
   gap: 32px;
   margin-left: auto;
   margin-right: 34px;
-  font-size: 12px;
+  font-size: 17px;
 }
 .desktop-nav a:hover,
 .text-link:hover {
@@ -102,7 +102,7 @@ button {
   gap: 20px;
 }
 .language {
-  font-size: 11px;
+  font-size: 16px;
 }
 .language span {
   color: #b5b1a7;
@@ -116,7 +116,7 @@ button {
   color: #fff;
   padding: 11px 15px;
   border-radius: 6px;
-  font-size: 11px;
+  font-size: 17px;
   display: flex;
   gap: 7px;
   align-items: center;
@@ -145,7 +145,7 @@ button {
 }
 .eyebrow {
   color: var(--gold);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-weight: 600;
@@ -155,7 +155,7 @@ button {
 h1,
 h2 {
   font:
-    600 clamp(48px, 5vw, 70px)/0.91 "Cormorant Garamond",
+    600 clamp(48px, 5vw, 70px)/0.91 'Cormorant Garamond',
     serif;
   letter-spacing: -0.035em;
   margin: 0;
@@ -166,14 +166,14 @@ h2 em {
   color: var(--parchment);
 }
 .hero-sub {
-  font: 500 21px/1.2 "Cormorant Garamond";
+  font: 500 22px/1.35 'Cormorant Garamond';
   margin: 22px 0 18px;
   max-width: 480px;
 }
 .hero-meta {
   display: flex;
   gap: 25px;
-  font: 14px/1.2 "Cormorant Garamond";
+  font: 19px/1.4 'Cormorant Garamond';
   margin: 25px 0;
 }
 .hero-meta span {
@@ -201,7 +201,7 @@ h2 em {
   gap: 9px;
   padding: 13px 19px;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 500;
   transition: 0.2s;
 }
@@ -223,7 +223,7 @@ h2 em {
   display: flex;
   gap: 25px;
   margin-top: 22px;
-  font-size: 11px;
+  font-size: 15px;
 }
 .hero-proof span {
   display: flex;
@@ -249,7 +249,7 @@ h2 em {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 11px;
+  font-size: 16px;
 }
 .trust-items i {
   height: 24px;
@@ -267,7 +267,7 @@ h2 em {
   line-height: 0.98;
 }
 .section-heading > p {
-  font: 16px/1.45 "Cormorant Garamond";
+  font: 20px/1.6 'Cormorant Garamond';
   color: #5e6875;
   max-width: 390px;
   margin: 14px 0;
@@ -304,19 +304,19 @@ h2 em {
   background: #f4e1a9;
   display: grid;
   place-items: center;
-  font: 600 17px "Cormorant Garamond";
+  font: 600 17px 'Cormorant Garamond';
   flex: none;
 }
 .step h3,
 .service-card h3,
 .proof-grid h3 {
-  font: 600 20px "Cormorant Garamond";
+  font: 600 22px 'Cormorant Garamond';
   margin: 0 0 4px;
 }
 .step p,
 .service-card p,
 .proof-grid p {
-  font: 12px/1.45 "Cormorant Garamond";
+  font: 19px/1.6 'Cormorant Garamond';
   margin: 0;
   color: #576273;
 }
@@ -350,7 +350,8 @@ h2 em {
   max-width: 170px;
 }
 .service-card p {
-  font-size: 14px;
+  font-size: 19px;
+  line-height: 1.6;
   margin-top: 10px;
 }
 .service-card > a {
@@ -388,14 +389,14 @@ h2 em {
   margin: 0;
   color: #657080;
   font:
-    19px/1.55 Inter,
+    16px/1.5 Inter,
     Arial,
     sans-serif;
 }
 .training-audiences {
   color: #777;
   font:
-    17px/1.45 Inter,
+    14px/1.45 Inter,
     Arial,
     sans-serif;
   white-space: nowrap;
@@ -425,7 +426,7 @@ h2 em {
   margin-bottom: 14px;
 }
 .proof-grid p {
-  font-size: 14px;
+  font-size: 19px;
 }
 .about {
   background: var(--warm);
@@ -439,18 +440,18 @@ h2 em {
 }
 .portrait {
   height: 430px;
-  background: url("/monia-office.png") 70% center/cover;
+  background: url('/monia-office.png') 70% center/cover;
   filter: saturate(0.75);
 }
 .about-copy h2 {
   margin-bottom: 8px;
 }
 .lead {
-  font: 20px "Cormorant Garamond";
+  font: 21px/1.4 'Cormorant Garamond';
   margin: 0 0 20px;
 }
 .about-copy > p:not(.lead) {
-  font: 16px/1.55 "Cormorant Garamond";
+  font: 20px/1.65 'Cormorant Garamond';
   color: #4e5b6c;
   max-width: 430px;
 }
@@ -458,15 +459,15 @@ h2 em {
   list-style: none;
   padding: 0;
   margin: 24px 0;
-  font: 14px/2 "Cormorant Garamond";
+  font: 19px/1.8 'Cormorant Garamond';
 }
 .about-copy li:before {
-  content: "—";
+  content: '—';
   color: var(--gold);
   margin-right: 10px;
 }
 .text-link {
-  font-size: 12px;
+  font-size: 17px;
   color: #966b06;
   display: inline-flex;
   gap: 8px;
@@ -477,7 +478,7 @@ h2 em {
 }
 .document-image {
   height: 320px;
-  background: url("/monia-office.png") center/cover;
+  background: url('/monia-office.png') center/cover;
   filter: sepia(0.2);
 }
 .confidence-grid h2 {
@@ -485,7 +486,7 @@ h2 em {
   margin-bottom: 20px;
 }
 .confidence-grid > div:last-child > p {
-  font: 17px/1.45 "Cormorant Garamond";
+  font: 21px/1.6 'Cormorant Garamond';
   color: #586577;
   max-width: 420px;
 }
@@ -495,7 +496,7 @@ h2 em {
   margin: 25px 0 13px;
 }
 .confidence-grid small {
-  font: 13px "Cormorant Garamond";
+  font: 17px 'Cormorant Garamond';
 }
 .faq {
   background: var(--warm);
@@ -512,7 +513,7 @@ h2 em {
   color: var(--dusk);
 }
 .faq-grid > div:first-child > p {
-  font: 16px/1.45 "Cormorant Garamond";
+  font: 20px/1.6 'Cormorant Garamond';
   color: #5f6b7c;
   max-width: 250px;
 }
@@ -528,7 +529,7 @@ h2 em {
   justify-content: space-between;
   text-align: left;
   color: var(--navy);
-  font: 17px "Cormorant Garamond";
+  font: 22px/1.4 'Cormorant Garamond';
   cursor: pointer;
 }
 .faq-item button svg {
@@ -547,7 +548,7 @@ h2 em {
   overflow: hidden;
   margin: 0;
   color: #5d6773;
-  font: 15px/1.45 "Cormorant Garamond";
+  font: 19px/1.6 'Cormorant Garamond';
 }
 .is-open .faq-answer {
   grid-template-rows: 1fr;
@@ -569,7 +570,7 @@ h2 em {
   font-size: 47px;
 }
 .final-cta p {
-  font: 16px "Cormorant Garamond";
+  font: 20px/1.5 'Cormorant Garamond';
   margin: 12px 0 0;
   color: #e3e5e8;
 }
@@ -590,7 +591,7 @@ h2 em {
   color: #fff;
 }
 .footer-role {
-  font: 14px/1.5 "Cormorant Garamond";
+  font: 19px/1.55 'Cormorant Garamond';
   color: #bfc6d0;
   margin: 14px 0;
 }
@@ -598,7 +599,7 @@ h2 em {
   margin-bottom: 16px;
 }
 .footer-contact p {
-  font: 13px "Cormorant Garamond";
+  font: 18px/1.5 'Cormorant Garamond';
   display: flex;
   align-items: center;
   gap: 9px;
@@ -614,7 +615,7 @@ h2 em {
 .socials {
   display: flex;
   gap: 19px;
-  font-size: 11px;
+  font-size: 18px;
   color: #bfc6d0;
   margin-top: 22px;
 }
@@ -631,16 +632,16 @@ h2 em {
   color: #b33d34;
 }
 .map-placeholder span {
-  font: 17px "Cormorant Garamond";
+  font: 21px 'Cormorant Garamond';
 }
 .map-placeholder small {
-  font-size: 12px;
+  font-size: 17px;
 }
 .footer-map > a {
   display: flex;
   align-items: center;
   gap: 7px;
-  font: 13px "Cormorant Garamond";
+  font: 18px 'Cormorant Garamond';
   color: #e2bd48;
   margin-top: 12px;
 }
@@ -648,7 +649,7 @@ h2 em {
   border-top: 1px solid #324052;
   margin-top: 42px;
   padding: 16px 0;
-  font-size: 10px;
+  font-size: 16px;
   color: #a5afbb;
 }
 @media (max-width: 800px) {
@@ -675,7 +676,7 @@ h2 em {
   }
   .mobile-nav a {
     padding: 13px 0;
-    font-size: 13px;
+    font-size: 17px;
   }
   .hero,
   .hero-grid {
@@ -692,10 +693,10 @@ h2 em {
     font-size: 53px;
   }
   .hero-sub {
-    font-size: 19px;
+    font-size: 20px;
   }
   .hero-meta {
-    font-size: 13px;
+    font-size: 17px;
   }
   .hero-actions {
     flex-wrap: wrap;
@@ -756,11 +757,14 @@ h2 em {
   }
   .training {
     grid-template-columns: 22px minmax(0, 1fr);
-    gap: 10px 12px;
-    padding: 13px 14px;
+    gap: 8px 12px;
+    padding: 12px 14px;
   }
   .training-copy {
     padding-left: 12px;
+  }
+  .training-copy p {
+    font-size: 15px;
   }
   .training-audiences {
     grid-column: 2;
@@ -815,7 +819,7 @@ h2 em {
     font-size: 22px;
   }
   .brand small {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 @media (min-width: 801px) and (max-width: 1050px) {
