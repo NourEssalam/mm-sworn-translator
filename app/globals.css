@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
@@ -11,29 +10,9 @@
   --color-parchment: #fbf5e0;
   --color-warm: #f5f4f0;
   --color-dusk: #1c3b6e;
-
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Inter', Arial, sans-serif;
 }
 
-:root {
-  --navy: #0a1931;
-  --gold: #c8a828;
-  --parchment: #fbf5e0;
-  --warm: #f5f4f0;
-  --white: #fff;
-  --dusk: #1c3b6e;
-  --charcoal: #3a3a3a;
-  --line: #dcd9d0;
-  --color-gold-bright: #e6bb43;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  background: var(--warm);
-  color: var(--navy);
-  font-family: Inter, Arial, sans-serif;
+@theme inline {
+  --font-serif: var(--font-cormorant-garamond), serif;
+  --font-sans: var(--font-inter), Arial, sans-serif;
 }
