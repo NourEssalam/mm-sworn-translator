@@ -3,46 +3,44 @@ import { Container } from '@/components/site/container';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { Heading, Lede } from '@/components/site/heading';
 import { Section } from '@/components/site/section';
-import { steps } from '@/lib/data';
+import type { Dictionary } from '@/dictionaries/en';
 import { cn } from '@/lib/utils';
 
-export function Process() {
+export function Process({ t }: { t: Dictionary['process'] }) {
   return (
     <Section id="process">
       <Container>
         <div className="md:flex md:items-end md:justify-between">
           <div>
-            <Eyebrow>How It Works</Eyebrow>
-            <Heading>A simple, secure process.</Heading>
+            <Eyebrow>{t.eyebrow}</Eyebrow>
+            <Heading>{t.heading}</Heading>
           </div>
-          <Lede className="mt-5 border-l border-gold pl-4 md:mt-3.5">
-            From your first message
-            <br />
-            to your certified document.
+          <Lede className="mt-5 border-s border-gold ps-4 whitespace-pre-line md:mt-3.5">
+            {t.lede}
           </Lede>
         </div>
         <div className="mt-9 md:mt-14 md:grid md:grid-cols-3">
-          {steps.map(([num, title, text], i) => (
+          {t.steps.map(({ num, title, text }, i) => (
             <div
               key={num}
               className={cn(
-                'relative flex items-center gap-4 border-b border-stone-300 py-5 pr-10 md:border-b-0 md:py-0 md:pr-11',
-                i > 0 && 'md:border-l md:pl-9',
+                'relative flex items-center gap-4 border-b border-stone-300 py-5 pe-10 md:border-b-0 md:py-0 md:pe-11',
+                i > 0 && 'md:border-s md:ps-9',
               )}
             >
               <span className="grid size-11 flex-none place-items-center rounded-full bg-gold/30 font-serif text-base font-semibold">
                 {num}
               </span>
               <div>
-                <h3 className="mb-1 font-serif text-xl font-semibold">
+                <h3 className="mb-1 font-serif text-xl font-semibold rtl:font-arabic-display rtl:font-bold">
                   {title}
                 </h3>
-                <p className="font-serif text-lg leading-relaxed text-slate-600">
+                <p className="font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
                   {text}
                 </p>
               </div>
-              {i < steps.length - 1 && (
-                <ArrowRight className="absolute right-1 text-yellow-600 md:right-2" />
+              {i < t.steps.length - 1 && (
+                <ArrowRight className="absolute end-1 text-yellow-600 md:end-2 rtl:rotate-180" />
               )}
             </div>
           ))}
