@@ -29,7 +29,7 @@ const amiri = Amiri({
 const notoSansArabic = Noto_Sans_Arabic({
   variable: '--font-noto-arabic',
   subsets: ['arabic'],
-  weight: ['400', '500'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
