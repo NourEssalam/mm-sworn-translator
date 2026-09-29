@@ -22,7 +22,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 h-17 border-b border-stone-200 bg-warm md:h-19">
       <Container className="flex h-full items-center justify-between gap-4">
-        <Brand />
+        <Brand light />
         <nav
           className="mr-8 ml-auto hidden gap-8 text-base lg:flex"
           aria-label="Main navigation"
