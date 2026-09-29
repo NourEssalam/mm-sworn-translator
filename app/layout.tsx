@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${inter.variable} scroll-smooth`}
+      className={`${cormorantGaramond.variable} ${inter.variable} scroll-pt-17 scroll-smooth md:scroll-pt-19`}
     >
       <body className="bg-warm font-sans text-navy">{children}</body>
     </html>

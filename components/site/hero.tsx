@@ -10,7 +10,7 @@ import { MAPS_URL } from '@/lib/data';
 export function Hero() {
   return (
     <section className="bg-navy text-white">
-      <Container className="grid md:min-h-121 md:grid-cols-2">
+      <Container className="grid grid-cols-1 md:min-h-121 md:grid-cols-2">
         <div className="pt-13 pb-10 md:pt-17">
           <Eyebrow>Sworn Translator · Court Interpreter</Eyebrow>
           <Heading as="h1" size="hero">
@@ -51,9 +51,12 @@ export function Hero() {
               <MapPin size={17} /> Get Directions <ArrowRight size={16} />
             </Button>
           </div>
-          <div className="mt-5 flex gap-6 text-sm">
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {['Arabic ↔ English', 'Confidential', 'Professional'].map((t) => (
-              <span key={t} className="flex items-center gap-2">
+              <span
+                key={t}
+                className="flex items-center gap-2 whitespace-nowrap"
+              >
                 <Check size={15} className="text-gold" /> {t}
               </span>
             ))}
