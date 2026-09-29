@@ -54,12 +54,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${inter.variable}`}
+      className={`${cormorantGaramond.variable} ${inter.variable} scroll-smooth`}
     >
-      <body className="antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+      <body className="bg-warm font-sans text-navy">{children}</body>
     </html>
   );
 }
