@@ -10,7 +10,7 @@ export function Confidentiality() {
       <Container className="grid items-center gap-8 md:grid-cols-2 md:gap-18">
         <div className="relative h-65 overflow-hidden md:h-80">
           <Image
-            src="/monia-office.png"
+            src="/stamp-conf.png"
             alt=""
             fill
             sizes="(min-width: 768px) 48vw, 100vw"
