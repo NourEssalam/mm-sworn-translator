@@ -7,9 +7,9 @@ import { MAPS_URL } from '@/lib/data';
 export function Footer() {
   return (
     <footer className="bg-navy-deep pt-11 text-white">
-      <Container className="grid gap-9 md:grid-cols-3 md:gap-15">
+      <Container className="grid gap-9 md:grid-cols-2 lg:grid-cols-3 lg:gap-15">
         <div>
-          <Brand />
+          <Brand stacked />
           <p className="my-3.5 font-serif text-lg leading-relaxed text-slate-300">
             Sworn Translator · Court Interpreter
             <br />
