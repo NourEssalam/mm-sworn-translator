@@ -1,4 +1,9 @@
 export const en = {
+  meta: {
+    titleSuffix: 'Arabic–English Sworn Translator',
+    description:
+      'Ministry of Justice-accredited Arabic–English sworn translation, court interpretation and language services in Bou Salem, Jendouba, Tunisia.',
+  },
   common: {
     getQuote: 'Get Your Quote',
     getDirections: 'Get Directions',
@@ -24,7 +29,7 @@ export const en = {
     homeLink: 'Monia Mhamdi home',
     mainNav: 'Main navigation',
     toggleMenu: 'Toggle menu',
-    language: 'Language',toggleMenu: 'Toggle menu',
+    language: 'Language',
     heroImage: 'Professional translation workspace',
   },
   trustStrip: [

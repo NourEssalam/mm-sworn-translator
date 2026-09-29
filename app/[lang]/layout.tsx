@@ -7,6 +7,8 @@ import {
 } from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
+import { getDictionary } from '@/dictionaries';
+import { languageAlternates, localeUrl, ogLocale, SITE_URL } from '@/lib/site';
 import { dirByLocale, isLocale, locales } from '@/lib/i18n';
 import '../globals.css';
 
@@ -34,24 +36,51 @@ const notoSansArabic = Noto_Sans_Arabic({
   weight: ['400', '500', '600', '700'],
 });
 
-export const metadata: Metadata = {
-  title: 'Monia Mhamdi | Arabic–English Sworn Translator',
-  description:
-    'Ministry of Justice-accredited Arabic–English sworn translation, court interpretation and language services in Bou Salem, Jendouba, Tunisia.',
-  icons: {
-    icon: [
-      {
-        url: '/LM-favcion.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/DM-favcion.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-    ],
-    //apple: '/apple-icon.png',
-  },
+const icons: Metadata['icons'] = {
+  icon: [
+    {
+      url: '/LM-favcion.png',
+      media: '(prefers-color-scheme: light)',
+    },
+    {
+      url: '/DM-favcion.png',
+      media: '(prefers-color-scheme: dark)',
+    },
+  ],
 };
+
+export async function generateMetadata({
+  params,
+}: LayoutProps<'/[lang]'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+
+  const dict = await getDictionary(lang);
+  const title = `${dict.brand.name} | ${dict.meta.titleSuffix}`;
+  const otherLocales = locales
+    .filter((l) => l !== lang)
+    .map((l) => ogLocale[l]);
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title,
+    description: dict.meta.description,
+    icons,
+    alternates: {
+      canonical: localeUrl(lang),
+      languages: languageAlternates(),
+    },
+    openGraph: {
+      type: 'website',
+      url: localeUrl(lang),
+      siteName: dict.brand.name,
+      title,
+      description: dict.meta.description,
+      locale: ogLocale[lang],
+      alternateLocale: otherLocales,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   colorScheme: 'light dark',
