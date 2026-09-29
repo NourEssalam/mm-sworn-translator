@@ -6,7 +6,9 @@ import {
   Noto_Sans_Arabic,
 } from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
-import './globals.css';
+import { notFound } from 'next/navigation';
+import { dirByLocale, isLocale, locales } from '@/lib/i18n';
+import '../globals.css';
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: '--font-cormorant-garamond',
@@ -59,14 +61,23 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export default async function LangLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params,
+}: LayoutProps<'/[lang]'>) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
   return (
     <html
-      lang="en"
+      lang={lang}
+      dir={dirByLocale[lang]}
       className={` ${cormorantGaramond.variable} ${inter.variable} ${amiri.variable} ${notoSansArabic.variable} scroll-pt-17 scroll-smooth md:scroll-pt-19`}
     >
       <body className="bg-warm font-sans text-navy">{children}</body>
