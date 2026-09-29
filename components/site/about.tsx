@@ -18,7 +18,7 @@ export function About() {
       <Container className="grid items-center gap-8 md:grid-cols-2 md:gap-18">
         <div className="relative h-82 overflow-hidden md:h-108">
           <Image
-            src="/monia-office.png"
+            src="/night-work.jpg"
             alt=""
             fill
             sizes="(min-width: 768px) 48vw, 100vw"

@@ -10,9 +10,17 @@
   --color-parchment: #fbf5e0;
   --color-warm: #f5f4f0;
   --color-dusk: #1c3b6e;
+
+  /* Text */
+  --color-text-primary: #0a1931;
+  --color-text-secondary: #4f5661;
+  --color-text-muted: #6b7280;
 }
 
 @theme inline {
   --font-serif: var(--font-cormorant-garamond), serif;
   --font-sans: var(--font-inter), Arial, sans-serif;
+
+  --font-arabic-display: var(--font-amiri), serif;
+  --font-arabic: var(--font-noto-arabic), sans-serif;
 }

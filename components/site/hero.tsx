@@ -9,9 +9,9 @@ import { MAPS_URL } from '@/lib/data';
 
 export function Hero() {
   return (
-    <section className="bg-navy text-white">
-      <Container className="grid grid-cols-1 md:min-h-121 md:grid-cols-2">
-        <div className="pt-13 pb-10 md:pt-17">
+    <section className="relative overflow-hidden bg-navy text-white">
+      <Container className="relative z-10">
+        <div className="pt-13 pb-10 md:min-h-121 md:max-w-2xl md:pt-17 md:pb-16">
           <Eyebrow>Sworn Translator · Court Interpreter</Eyebrow>
           <Heading as="h1" size="hero">
             Arabic &#8596; English
@@ -62,21 +62,24 @@ export function Hero() {
             ))}
           </div>
         </div>
-        <div
-          className="relative h-69 md:h-auto"
-          aria-label="Professional translation workspace"
-        >
-          <Image
-            src="/hero1.png"
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 768px) 48vw, 100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-navy to-transparent" />
-        </div>
       </Container>
+
+      <div
+        className="relative h-69 md:absolute md:inset-0 md:h-auto"
+        aria-label="Professional translation workspace"
+      >
+        <Image
+          src="/hero1.png"
+          alt=""
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-x-0 top-0 h-12 bg-linear-to-b from-navy to-transparent md:hidden" />
+        <div className="absolute inset-0 hidden bg-linear-to-r from-navy via-navy/80 to-navy/10 md:block" />
+      </div>
     </section>
   );
 }

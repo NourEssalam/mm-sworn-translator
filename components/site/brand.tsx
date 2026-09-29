@@ -1,26 +1,52 @@
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
-export function Brand({ light = false }: { light?: boolean }) {
+export function Brand({
+  light = false,
+  stacked = false,
+}: {
+  light?: boolean;
+  stacked?: boolean;
+}) {
   return (
     <a
       href="#top"
-      className="flex shrink-0 items-center gap-2.5 sm:gap-3"
+      className={cn(
+        'flex shrink-0 gap-2.5 sm:gap-3',
+        stacked ? 'flex-col items-start gap-4 sm:gap-4' : 'items-center',
+      )}
       aria-label="Monia Mhamdi home"
     >
-      <span className="relative grid size-10 place-items-center rounded-full border border-gold font-serif text-2xl font-bold text-gold after:absolute after:inset-1 after:rounded-full after:border after:border-gold/50 sm:size-11.5 sm:text-3xl">
-        M
-      </span>
-      <span>
+      <Image
+        src={light ? '/LM-logo-seal.svg' : '/DM-logo-seal.svg'}
+        alt=""
+        width={96}
+        height={96}
+        unoptimized
+        priority={!light}
+        className={stacked ? 'size-24' : 'size-12 sm:size-16'}
+      />
+      <span className="block">
         <strong
           className={cn(
-            'block font-serif text-xl leading-tight font-semibold tracking-tight whitespace-nowrap sm:text-2xl',
-            light && 'text-white',
+            'block border-b border-gold/40 pb-0.5 font-serif leading-tight font-semibold tracking-tight whitespace-nowrap',
+            stacked ? 'text-3xl' : 'text-xl sm:text-2xl',
+            light ? 'text-navy' : 'text-white',
           )}
         >
           Monia Mhamdi
         </strong>
-        <small className="block text-xs whitespace-nowrap sm:text-sm">
-          Sworn Translator ·{' '}
+        <small
+          className={cn(
+            'mt-1 block whitespace-nowrap',
+            stacked ? 'text-sm sm:text-base' : 'text-xs sm:text-sm',
+            light ? 'text-navy' : 'text-slate-300',
+          )}
+        >
+          Sworn Translator{' '}
+          <span className="mx-1 text-gold" aria-hidden="true">
+            •
+          </span>{' '}
           <b className="font-medium" dir="rtl">
             مترجمة محلفة
           </b>

@@ -1,5 +1,10 @@
 import { Analytics } from '@vercel/analytics/next';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import {
+  Amiri,
+  Cormorant_Garamond,
+  Inter,
+  Noto_Sans_Arabic,
+} from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
@@ -13,6 +18,18 @@ const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+});
+
+const amiri = Amiri({
+  variable: '--font-amiri',
+  subsets: ['arabic'],
+  weight: ['400', '700'],
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  variable: '--font-noto-arabic',
+  subsets: ['arabic'],
+  weight: ['400', '500'],
 });
 
 export const metadata: Metadata = {
@@ -29,10 +46,6 @@ export const metadata: Metadata = {
         url: '/DM-favcion.png',
         media: '(prefers-color-scheme: dark)',
       },
-      //{
-      //url: '/DM-navy-512_512.svg',
-      //type: 'image/svg+xml',
-      //},
     ],
     //apple: '/apple-icon.png',
   },
@@ -54,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${inter.variable} scroll-pt-17 scroll-smooth md:scroll-pt-19`}
+      className={` ${cormorantGaramond.variable} ${inter.variable} ${amiri.variable} ${notoSansArabic.variable} scroll-pt-17 scroll-smooth md:scroll-pt-19`}
     >
       <body className="bg-warm font-sans text-navy">{children}</body>
     </html>
