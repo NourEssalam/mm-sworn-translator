@@ -1,5 +1,7 @@
 import { FileText, Globe2, MessageCircle, ShieldCheck } from 'lucide-react';
 
+export const ARABIC_URL = '/ar';
+
 export const WHATSAPP_URL =
   'https://wa.me/21693012617?text=Hello%20Monia%2C%20I%27d%20like%20to%20request%20a%20quote.';
 export const MAPS_URL =

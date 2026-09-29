@@ -9,10 +9,11 @@ import { Process } from '@/components/site/process';
 import { Proof } from '@/components/site/proof';
 import { Services } from '@/components/site/services';
 import { TrustStrip } from '@/components/site/trust-strip';
-
+import { LanguageBar } from '@/components/site/language-bar';
 export default function Page() {
   return (
     <main id="top">
+      <LanguageBar />
       <Header />
       <Hero />
       <TrustStrip />
