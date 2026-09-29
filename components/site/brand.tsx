@@ -24,7 +24,7 @@ export function Brand({
         height={96}
         unoptimized
         priority={!light}
-        className={stacked ? 'size-24' : 'size-11 sm:size-12'}
+        className={stacked ? 'size-24' : 'size-12 sm:size-16'}
       />
       <span className="block">
         <strong
