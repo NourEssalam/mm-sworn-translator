@@ -18,10 +18,10 @@ export function Proof({ t }: { t: Dictionary['proof'] }) {
             {t.points.map(({ title, text }) => (
               <div
                 key={title}
-                className="border-t border-gold/40 pt-4 md:border-t-0 md:border-l md:pt-0 md:pl-4"
+                className="border-t border-gold/40 pt-4 md:border-s md:border-t-0 md:ps-4 md:pt-0"
               >
                 <ShieldCheck size={24} className="mb-3.5 text-yellow-600" />
-                <h3 className="mb-1 font-serif text-xl font-semibold rtl:font-arabic-display">
+                <h3 className="mb-1 font-serif text-xl font-semibold rtl:font-arabic-display rtl:font-bold">
                   {title}
                 </h3>
                 <p className="font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">

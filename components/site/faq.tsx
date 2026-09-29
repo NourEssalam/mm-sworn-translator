@@ -33,7 +33,7 @@ export function Faq({ t }: { t: Dictionary['faq'] }) {
               <AccordionTrigger className="py-4.5 font-serif text-xl leading-snug font-normal text-navy hover:no-underline aria-expanded:**:data-[slot=accordion-trigger-icon]:text-gold rtl:font-arabic">
                 {q}
               </AccordionTrigger>
-              <AccordionContent className="pr-7 pb-4 font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
+              <AccordionContent className="pe-7 pb-4 font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
                 {a}
               </AccordionContent>
             </AccordionItem>

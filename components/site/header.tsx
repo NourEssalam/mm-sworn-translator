@@ -41,7 +41,7 @@ export function Header({
       <Container className="flex h-full items-center justify-between gap-4">
         <Brand light brand={brand} homeLabel={a11y.homeLink} />
         <nav
-          className="mr-8 ml-auto hidden gap-8 text-base lg:flex"
+          className="ms-auto me-8 hidden gap-8 text-base lg:flex"
           aria-label={a11y.mainNav}
         >
           {links.map(([href, label]) => (

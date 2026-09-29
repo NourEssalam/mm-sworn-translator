@@ -27,10 +27,10 @@ export function Hero({
             <br />
             <Accent>{t.titleAccent}</Accent>
           </Heading>
-          <p className="mt-5 mb-4 max-w-120 font-serif text-xl leading-snug font-medium rtl:font-arabic">
+          <p className="mt-5 mb-4 max-w-120 font-serif text-xl leading-snug font-medium rtl:font-arabic rtl:leading-relaxed">
             {t.description}
           </p>
-          <div className="my-6 flex gap-6 font-serif text-lg leading-snug rtl:font-arabic">
+          <div className="my-6 flex gap-6 font-serif text-lg leading-snug rtl:font-arabic rtl:leading-relaxed">
             <span className="flex items-start gap-2">
               <ShieldCheck size={21} className="text-gold" />
               <span>
@@ -39,7 +39,7 @@ export function Hero({
                 <b className="font-medium">{t.accreditedBadge}</b>
               </span>
             </span>
-            <span className="flex items-start gap-2 border-l border-slate-500 pl-6">
+            <span className="flex items-start gap-2 border-s border-slate-500 ps-6">
               <MapPin size={21} className="text-gold" />
               <span>
                 {t.locationTitle}
@@ -58,10 +58,10 @@ export function Hero({
               render={<a href={MAPS_URL} target="_blank" rel="noreferrer" />}
             >
               <MapPin size={17} /> {common.getDirections}{' '}
-              <ArrowRight size={16} />
+              <ArrowRight size={16} className="rtl:rotate-180" />
             </Button>
           </div>
-          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm rtl:text-base">
             {t.tags.map((tag) => (
               <span
                 key={tag}
@@ -88,7 +88,7 @@ export function Hero({
           className="object-cover"
         />
         <div className="absolute inset-x-0 top-0 h-12 bg-linear-to-b from-navy to-transparent md:hidden" />
-        <div className="absolute inset-0 hidden bg-linear-to-r from-navy via-navy/80 to-navy/10 md:block" />
+        <div className="absolute inset-0 hidden bg-linear-to-r from-navy via-navy/80 to-navy/10 md:block rtl:bg-linear-to-l" />
       </div>
     </section>
   );

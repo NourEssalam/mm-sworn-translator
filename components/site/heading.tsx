@@ -19,7 +19,7 @@ export function Heading({
   return (
     <Tag
       className={cn(
-        'font-serif leading-none font-semibold tracking-tight rtl:font-arabic-display rtl:leading-tight rtl:tracking-normal',
+        'font-serif leading-none font-semibold tracking-tight rtl:font-arabic-display rtl:leading-tight rtl:font-bold rtl:tracking-normal',
         sizes[size],
         className,
       )}

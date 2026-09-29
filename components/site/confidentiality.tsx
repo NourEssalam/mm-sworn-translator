@@ -25,7 +25,7 @@ export function Confidentiality({ t }: { t: Dictionary['confidentiality'] }) {
             {t.text}
           </p>
           <div className="mt-6 mb-3 w-11 border-t-2 border-gold" />
-          <small className="font-serif text-base rtl:font-arabic">
+          <small className="font-serif text-base rtl:font-arabic rtl:text-lg">
             {t.footer}
           </small>
         </div>

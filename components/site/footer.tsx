@@ -52,7 +52,7 @@ export function Footer({
           </div>
         </div>
         <div className="md:col-span-2 lg:col-span-1">
-          <div className="flex h-30 items-center justify-center gap-2.5 bg-linear-to-br from-stone-200 via-sky-200 to-amber-100 text-navy">
+          <div className="flex h-30 items-center justify-center gap-2.5 bg-linear-to-br from-stone-200 via-sky-200 to-amber-100 text-navy rtl:bg-linear-to-bl">
             <MapPin size={25} className="text-red-700" />
             <span className="font-serif text-xl rtl:font-arabic">
               {t.mapCard.city}
@@ -66,12 +66,13 @@ export function Footer({
             rel="noreferrer"
             className="mt-3 flex items-center gap-2 font-serif text-lg text-gold-bright hover:text-yellow-200 rtl:font-arabic"
           >
-            {common.getDirections} <ArrowRight size={14} />
+            {common.getDirections}{' '}
+            <ArrowRight size={14} className="rtl:rotate-180" />
           </a>
         </div>
       </Container>
       <Container>
-        <div className="mt-9 border-t border-slate-700 py-4 text-base text-slate-400 md:mt-10">
+        <div className="mt-9 border-t border-slate-700 py-4 text-base text-slate-400 md:mt-10 rtl:text-lg">
           {t.copyright}
         </div>
       </Container>

@@ -21,7 +21,7 @@ export function FinalCta({
             <br />
             <Accent>{t.headingAccent}</Accent>
           </Heading>
-          <p className="mt-3 font-serif text-xl leading-normal text-slate-200 rtl:font-arabic">
+          <p className="mt-3 font-serif text-xl leading-normal text-slate-200 rtl:font-arabic rtl:leading-relaxed">
             {t.text}
           </p>
         </div>

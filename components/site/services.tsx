@@ -22,7 +22,7 @@ export function Services({ t }: { t: Dictionary['services'] }) {
                 className="relative min-h-51 border border-stone-300 px-5 pt-6 pb-5 md:min-h-59 md:px-4 md:py-5 lg:px-5 lg:pt-6 lg:pb-5"
               >
                 <Icon className="mb-6 text-yellow-600 md:mb-8" size={28} />
-                <h3 className="mb-1 max-w-42 font-serif text-xl leading-tight font-semibold rtl:font-arabic-display">
+                <h3 className="mb-1 max-w-42 font-serif text-xl leading-tight font-semibold rtl:font-arabic-display rtl:font-bold">
                   {title}
                 </h3>
                 <p className="mt-2.5 font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
@@ -38,15 +38,15 @@ export function Services({ t }: { t: Dictionary['services'] }) {
             size={22}
             aria-hidden="true"
           />
-          <div className="min-w-0 flex-1 border-l border-gold/40 pl-3 md:pl-4">
-            <h3 className="mb-1 font-serif text-xl leading-tight font-semibold text-navy rtl:font-arabic-display">
+          <div className="min-w-0 flex-1 border-s border-gold/40 ps-3 md:ps-4">
+            <h3 className="mb-1 font-serif text-xl leading-tight font-semibold text-navy rtl:font-arabic-display rtl:font-bold">
               {t.training.title}
             </h3>
-            <p className="text-sm leading-normal text-slate-500 md:text-base">
+            <p className="text-sm leading-normal text-slate-500 md:text-base rtl:text-base rtl:leading-relaxed">
               {t.training.description}
             </p>
           </div>
-          <span className="basis-full pl-8.5 text-sm leading-normal text-stone-500 md:basis-auto md:pl-0 md:whitespace-nowrap">
+          <span className="basis-full ps-8.5 text-sm leading-normal text-stone-500 md:basis-auto md:ps-0 md:whitespace-nowrap rtl:text-base">
             {t.training.badge}
           </span>
         </div>

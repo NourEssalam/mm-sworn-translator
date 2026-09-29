@@ -23,7 +23,7 @@ export function About({
             alt=""
             fill
             sizes="(min-width: 768px) 48vw, 100vw"
-            className="object-cover object-right saturate-75"
+            className="object-cover object-right saturate-75 rtl:object-left"
           />
         </div>
         <div>
@@ -38,7 +38,7 @@ export function About({
           <ul className="my-6 font-serif text-lg leading-8 rtl:font-arabic">
             {t.credentials.map((c) => (
               <li key={c}>
-                <span className="mr-2.5 text-gold" aria-hidden="true">
+                <span className="me-2.5 text-gold" aria-hidden="true">
                   —
                 </span>
                 {c}
@@ -47,12 +47,13 @@ export function About({
           </ul>
 
           <a
-            className="inline-flex items-center gap-2 text-base text-yellow-700 hover:text-gold"
+            className="inline-flex items-center gap-2 text-base text-yellow-700 hover:text-gold rtl:text-lg"
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
           >
-            {common.viewCredentials} <ArrowRight size={16} />
+            {common.viewCredentials}{' '}
+            <ArrowRight size={16} className="rtl:rotate-180" />
           </a>
         </div>
       </Container>

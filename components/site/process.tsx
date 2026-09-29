@@ -15,7 +15,7 @@ export function Process({ t }: { t: Dictionary['process'] }) {
             <Eyebrow>{t.eyebrow}</Eyebrow>
             <Heading>{t.heading}</Heading>
           </div>
-          <Lede className="mt-5 border-l border-gold pl-4 whitespace-pre-line md:mt-3.5">
+          <Lede className="mt-5 border-s border-gold ps-4 whitespace-pre-line md:mt-3.5">
             {t.lede}
           </Lede>
         </div>
@@ -24,15 +24,15 @@ export function Process({ t }: { t: Dictionary['process'] }) {
             <div
               key={num}
               className={cn(
-                'relative flex items-center gap-4 border-b border-stone-300 py-5 pr-10 md:border-b-0 md:py-0 md:pr-11',
-                i > 0 && 'md:border-l md:pl-9',
+                'relative flex items-center gap-4 border-b border-stone-300 py-5 pe-10 md:border-b-0 md:py-0 md:pe-11',
+                i > 0 && 'md:border-s md:ps-9',
               )}
             >
               <span className="grid size-11 flex-none place-items-center rounded-full bg-gold/30 font-serif text-base font-semibold">
                 {num}
               </span>
               <div>
-                <h3 className="mb-1 font-serif text-xl font-semibold rtl:font-arabic-display">
+                <h3 className="mb-1 font-serif text-xl font-semibold rtl:font-arabic-display rtl:font-bold">
                   {title}
                 </h3>
                 <p className="font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
@@ -40,7 +40,7 @@ export function Process({ t }: { t: Dictionary['process'] }) {
                 </p>
               </div>
               {i < t.steps.length - 1 && (
-                <ArrowRight className="absolute right-1 text-yellow-600 md:right-2" />
+                <ArrowRight className="absolute end-1 text-yellow-600 md:end-2 rtl:rotate-180" />
               )}
             </div>
           ))}

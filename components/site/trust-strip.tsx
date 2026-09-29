@@ -9,7 +9,7 @@ export function TrustStrip({ items }: { items: Dictionary['trustStrip'] }) {
         {items.map((item, i) => (
           <Fragment key={item}>
             {i > 0 && (
-              <i className="hidden h-6 border-l border-stone-300 md:block" />
+              <i className="hidden h-6 border-s border-stone-300 md:block" />
             )}
             <span>{item}</span>
           </Fragment>

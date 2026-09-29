@@ -34,7 +34,7 @@ export function Brand({
       <span className="block">
         <strong
           className={cn(
-            'block border-b border-gold/40 pb-0.5 font-serif leading-tight font-semibold tracking-tight whitespace-nowrap rtl:font-arabic-display rtl:tracking-normal',
+            'block border-b border-gold/40 pb-0.5 font-serif leading-tight font-semibold tracking-tight whitespace-nowrap rtl:font-arabic-display rtl:font-bold rtl:tracking-normal',
             stacked ? 'text-3xl' : 'text-xl sm:text-2xl',
             light ? 'text-navy' : 'text-white',
           )}
@@ -44,7 +44,9 @@ export function Brand({
         <small
           className={cn(
             'mt-1 block whitespace-nowrap',
-            stacked ? 'text-sm sm:text-base' : 'text-xs sm:text-sm',
+            stacked
+              ? 'text-sm sm:text-base rtl:text-base sm:rtl:text-lg'
+              : 'text-xs sm:text-sm rtl:text-sm sm:rtl:text-base',
             light ? 'text-navy' : 'text-slate-300',
           )}
         >

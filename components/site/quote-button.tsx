@@ -20,7 +20,8 @@ export function QuoteButton({
       nativeButton={false}
       render={<a href={WHATSAPP_URL} target="_blank" rel="noreferrer" />}
     >
-      <MessageCircle size={17} /> {label} <ArrowRight size={16} />
+      <MessageCircle size={17} /> {label}{' '}
+      <ArrowRight size={16} className="rtl:rotate-180" />
     </Button>
   );
 }
