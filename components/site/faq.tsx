@@ -8,35 +8,33 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { faqs } from '@/lib/data';
+import type { Dictionary } from '@/dictionaries/en';
 
-export function Faq() {
+export function Faq({ t }: { t: Dictionary['faq'] }) {
   return (
     <Section id="faq" className="bg-warm">
       <Container className="grid gap-10 md:grid-cols-5 md:gap-12">
         <div className="md:col-span-2">
-          <Eyebrow>Frequently Asked Questions</Eyebrow>
+          <Eyebrow>{t.eyebrow}</Eyebrow>
           <Heading className="mb-4.5">
-            Questions,
+            {t.headingMain}
             <br />
-            <Accent className="text-dusk">answered.</Accent>
+            <Accent className="text-dusk">{t.headingAccent}</Accent>
           </Heading>
-          <Lede className="max-w-62">
-            Everything you need to know before sending your documents.
-          </Lede>
+          <Lede className="max-w-62">{t.lede}</Lede>
         </div>
         <Accordion defaultValue={[0]} className="md:col-span-3">
-          {faqs.map(([question, answer], i) => (
+          {t.items.map(({ q, a }, i) => (
             <AccordionItem
-              key={question}
+              key={q}
               value={i}
               className="border-b border-stone-300"
             >
-              <AccordionTrigger className="py-4.5 font-serif text-xl leading-snug font-normal text-navy hover:no-underline aria-expanded:**:data-[slot=accordion-trigger-icon]:text-gold">
-                {question}
+              <AccordionTrigger className="py-4.5 font-serif text-xl leading-snug font-normal text-navy hover:no-underline aria-expanded:**:data-[slot=accordion-trigger-icon]:text-gold rtl:font-arabic">
+                {q}
               </AccordionTrigger>
-              <AccordionContent className="pr-7 pb-4 font-serif text-lg leading-relaxed text-slate-600">
-                {answer}
+              <AccordionContent className="pr-7 pb-4 font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
+                {a}
               </AccordionContent>
             </AccordionItem>
           ))}

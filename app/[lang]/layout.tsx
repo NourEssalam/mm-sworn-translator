@@ -80,7 +80,9 @@ export default async function LangLayout({
       dir={dirByLocale[lang]}
       className={` ${cormorantGaramond.variable} ${inter.variable} ${amiri.variable} ${notoSansArabic.variable} scroll-pt-17 scroll-smooth md:scroll-pt-19`}
     >
-      <body className="bg-warm font-sans text-navy">{children}</body>
+      <body className="bg-warm font-sans text-navy rtl:font-arabic">
+        {children}
+      </body>
     </html>
   );
 }

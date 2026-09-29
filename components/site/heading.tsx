@@ -19,7 +19,7 @@ export function Heading({
   return (
     <Tag
       className={cn(
-        'font-serif leading-none font-semibold tracking-tight',
+        'font-serif leading-none font-semibold tracking-tight rtl:font-arabic-display rtl:leading-tight rtl:tracking-normal',
         sizes[size],
         className,
       )}
@@ -38,7 +38,7 @@ export function Lede({ className, ...props }: React.ComponentProps<'p'>) {
   return (
     <p
       className={cn(
-        'my-3.5 max-w-96 font-serif text-xl leading-relaxed text-slate-500',
+        'my-3.5 max-w-96 font-serif text-xl leading-relaxed text-slate-500 rtl:font-arabic',
         className,
       )}
       {...props}
