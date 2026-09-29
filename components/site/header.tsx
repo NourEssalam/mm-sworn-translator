@@ -4,24 +4,19 @@ import { useState } from 'react';
 import { Menu, MessageCircle, X } from 'lucide-react';
 import { Brand } from '@/components/site/brand';
 import { Container } from '@/components/site/container';
+import { LanguageToggle } from '@/components/site/language-toggle';
 import type { Dictionary } from '@/dictionaries/en';
 import { WHATSAPP_URL } from '@/lib/data';
-
-function LanguageSwitch({ className }: { className?: string }) {
-  return (
-    <a href="#" className={className}>
-      AR <span className="mx-1.5 text-stone-400">|</span>{' '}
-      <b className="font-semibold">EN</b>
-    </a>
-  );
-}
+import type { Locale } from '@/lib/i18n';
 
 export function Header({
+  lang,
   nav,
   common,
   brand,
   a11y,
 }: {
+  lang: Locale;
   nav: Dictionary['nav'];
   common: Dictionary['common'];
   brand: Dictionary['brand'];
@@ -51,7 +46,11 @@ export function Header({
           ))}
         </nav>
         <div className="flex items-center gap-4 sm:gap-5">
-          <LanguageSwitch className="hidden text-base whitespace-nowrap sm:block" />
+          <LanguageToggle
+            lang={lang}
+            label={a11y.language}
+            className="hidden sm:inline-flex"
+          />
           <a
             className="hidden items-center gap-2 rounded-md bg-navy px-4 py-2.5 text-base whitespace-nowrap text-white md:flex"
             href={WHATSAPP_URL}
@@ -82,7 +81,12 @@ export function Header({
               {label}
             </a>
           ))}
-          <LanguageSwitch className="py-3 text-base sm:hidden" />
+          <LanguageToggle
+            lang={lang}
+            label={a11y.language}
+            size="md"
+            className="my-3 self-start sm:hidden"
+          />
         </nav>
       )}
     </header>

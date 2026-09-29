@@ -26,6 +26,7 @@ export const ar: Dictionary = {
     homeLink: 'منية المحمدي – الصفحة الرئيسية',
     mainNav: 'التنقل الرئيسي',
     toggleMenu: 'فتح القائمة أو إغلاقها',
+    language: 'اللغة',
     heroImage: 'فضاء عمل احترافي للترجمة',
   },
   trustStrip: [

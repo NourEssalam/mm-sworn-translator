@@ -6,7 +6,7 @@ import { FinalCta } from '@/components/site/final-cta';
 import { Footer } from '@/components/site/footer';
 import { Header } from '@/components/site/header';
 import { Hero } from '@/components/site/hero';
-import { LanguageBar } from '@/components/site/language-bar';
+import { LanguageToggle } from '@/components/site/language-toggle';
 import { Process } from '@/components/site/process';
 import { Proof } from '@/components/site/proof';
 import { Services } from '@/components/site/services';
@@ -25,8 +25,16 @@ export default async function Page({
 
   return (
     <main id="top">
-      <LanguageBar />
+      <div className="flex justify-center bg-navy py-2 sm:hidden">
+        <LanguageToggle
+          lang={lang}
+          label={dict.a11y.language}
+          size="md"
+          tone="dark"
+        />
+      </div>
       <Header
+        lang={lang}
         nav={dict.nav}
         common={dict.common}
         brand={dict.brand}

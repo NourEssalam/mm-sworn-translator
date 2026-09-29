@@ -24,6 +24,7 @@ export const en = {
     homeLink: 'Monia Mhamdi home',
     mainNav: 'Main navigation',
     toggleMenu: 'Toggle menu',
+    language: 'Language',toggleMenu: 'Toggle menu',
     heroImage: 'Professional translation workspace',
   },
   trustStrip: [
