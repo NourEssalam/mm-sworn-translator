@@ -44,6 +44,7 @@ export default async function Page({
         t={dict.hero}
         common={dict.common}
         imageLabel={dict.a11y.heroImage}
+        imageSrc={lang === 'ar' ? '/hero1-ar.png' : '/hero1.png'}
       />
       <TrustStrip items={dict.trustStrip} />
       <Process t={dict.process} />
