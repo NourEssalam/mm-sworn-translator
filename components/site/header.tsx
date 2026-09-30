@@ -6,7 +6,7 @@ import { Brand } from '@/components/site/brand';
 import { Container } from '@/components/site/container';
 import { LanguageToggle } from '@/components/site/language-toggle';
 import type { Dictionary } from '@/dictionaries/en';
-import { WHATSAPP_URL } from '@/lib/data';
+import { whatsappLink } from '@/lib/data';
 import type { Locale } from '@/lib/i18n';
 
 export function Header({
@@ -53,7 +53,7 @@ export function Header({
           />
           <a
             className="hidden items-center gap-2 rounded-md bg-navy px-4 py-2.5 text-base whitespace-nowrap text-white md:flex"
-            href={WHATSAPP_URL}
+            href={whatsappLink(common.whatsappMessage)}
             target="_blank"
             rel="noreferrer"
           >

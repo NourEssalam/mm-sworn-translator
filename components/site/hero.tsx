@@ -6,7 +6,7 @@ import { Eyebrow } from '@/components/site/eyebrow';
 import { Accent, Heading } from '@/components/site/heading';
 import { QuoteButton } from '@/components/site/quote-button';
 import type { Dictionary } from '@/dictionaries/en';
-import { MAPS_URL } from '@/lib/data';
+import { MAPS_URL, whatsappLink } from '@/lib/data';
 
 export function Hero({
   t,
@@ -55,7 +55,10 @@ export function Hero({
             </span>
           </div>
           <div className="flex flex-wrap gap-3.5 md:flex-nowrap">
-            <QuoteButton label={common.getQuote} />
+            <QuoteButton
+              label={common.getQuote}
+              href={whatsappLink(common.whatsappMessage)}
+            />
             <Button
               variant="outline-light"
               size="cta"

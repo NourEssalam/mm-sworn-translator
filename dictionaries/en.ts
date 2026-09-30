@@ -9,6 +9,7 @@ export const en = {
     getDirections: 'Get Directions',
     whatsapp: 'WhatsApp',
     viewCredentials: 'View credentials',
+    whatsappMessage: "Hello Monia, I'd like to request a quote.",
   },
   brand: {
     name: 'Monia Mhamdi',

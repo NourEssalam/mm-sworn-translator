@@ -1,18 +1,15 @@
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
 import { Container } from '@/components/site/container';
 import { Eyebrow } from '@/components/site/eyebrow';
 import { Heading } from '@/components/site/heading';
 import { Section } from '@/components/site/section';
 import type { Dictionary } from '@/dictionaries/en';
-import { WHATSAPP_URL } from '@/lib/data';
 
 export function About({
   t,
-  common,
 }: {
   t: Dictionary['about'];
-  common: Dictionary['common'];
+  common?: Dictionary['common'];
 }) {
   return (
     <Section id="about" className="bg-warm">
@@ -46,15 +43,10 @@ export function About({
             ))}
           </ul>
 
-          {/*<a
-            className="inline-flex items-center gap-2 text-base text-yellow-700 hover:text-gold rtl:text-lg"
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {common.viewCredentials}{' '}
-            <ArrowRight size={16} className="rtl:rotate-180" />
-          </a>*/}
+          {/* "View credentials" link is disabled. To re-enable: import
+              ArrowRight from 'lucide-react' and whatsappLink from '@/lib/data',
+              make `common` a required prop, then use
+              href={whatsappLink(common.whatsappMessage)} */}
         </div>
       </Container>
     </Section>

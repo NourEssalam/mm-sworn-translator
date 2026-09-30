@@ -3,6 +3,7 @@ import { Eyebrow } from '@/components/site/eyebrow';
 import { Accent, Heading } from '@/components/site/heading';
 import { QuoteButton } from '@/components/site/quote-button';
 import type { Dictionary } from '@/dictionaries/en';
+import { whatsappLink } from '@/lib/data';
 
 export function FinalCta({
   t,
@@ -25,7 +26,12 @@ export function FinalCta({
             {t.text}
           </p>
         </div>
-        <QuoteButton label={common.getQuote} compact className="mt-7 md:mt-0" />
+        <QuoteButton
+          label={common.getQuote}
+          href={whatsappLink(common.whatsappMessage)}
+          compact
+          className="mt-7 md:mt-0"
+        />
       </Container>
     </section>
   );

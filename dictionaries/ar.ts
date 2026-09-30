@@ -11,6 +11,7 @@ export const ar: Dictionary = {
     getDirections: 'الحصول على الاتجاهات',
     whatsapp: 'واتساب',
     viewCredentials: 'عرض المؤهلات والاعتمادات',
+    whatsappMessage: 'مرحباً منية، أود طلب عرض سعر.',
   },
   brand: {
     name: 'Monia Mhamdi',
