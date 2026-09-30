@@ -12,7 +12,7 @@ import { Proof } from '@/components/site/proof';
 import { Services } from '@/components/site/services';
 import { TrustStrip } from '@/components/site/trust-strip';
 import { getDictionary } from '@/dictionaries';
-import { isLocale } from '@/lib/i18n';
+import { dirByLocale, isLocale } from '@/lib/i18n';
 
 export default async function Page({
   params,
@@ -51,7 +51,7 @@ export default async function Page({
       <Proof t={dict.proof} />
       <About t={dict.about} common={dict.common} />
       <Confidentiality t={dict.confidentiality} />
-      <Faq t={dict.faq} />
+      <Faq t={dict.faq} dir={dirByLocale[lang]} />{' '}
       <FinalCta t={dict.finalCta} common={dict.common} />
       <Footer
         t={dict.footer}

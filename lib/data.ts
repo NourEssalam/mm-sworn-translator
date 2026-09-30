@@ -4,8 +4,7 @@ export const ARABIC_URL = '/ar';
 
 export const WHATSAPP_URL =
   'https://wa.me/21693012617?text=Hello%20Monia%2C%20I%27d%20like%20to%20request%20a%20quote.';
-export const MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Bou+Salem%2C+Jendouba%2C+Tunisia';
+export const MAPS_URL = 'https://maps.app.goo.gl/o5R1bjwcBvxSbszf8';
 
 // Same order as `services.items` in the dictionaries.
 export const serviceIcons = [FileText, Globe2, ShieldCheck, MessageCircle];

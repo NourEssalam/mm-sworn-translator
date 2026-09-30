@@ -29,35 +29,34 @@ export function Brand({
         height={96}
         unoptimized
         priority={!light}
-        className={stacked ? 'size-24' : 'size-12 sm:size-16'}
+        className={stacked ? 'size-24' : 'size-12 sm:size-14'}
       />
+
       <span className="block">
         <strong
           className={cn(
-            'block border-b border-gold/40 pb-0.5 font-serif leading-tight font-semibold tracking-tight whitespace-nowrap rtl:font-arabic-display rtl:font-bold rtl:tracking-normal',
-            stacked ? 'text-3xl' : 'text-xl sm:text-2xl',
+            'block border-b border-gold/40 pb-0.5 text-center font-serif leading-tight font-semibold whitespace-nowrap',
+            stacked ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl',
             light ? 'text-navy' : 'text-white',
           )}
         >
           {brand.name}
         </strong>
+
         <small
           className={cn(
-            'mt-1 block whitespace-nowrap',
-            stacked
-              ? 'text-sm sm:text-base rtl:text-base sm:rtl:text-lg'
-              : 'text-xs sm:text-sm rtl:text-sm sm:rtl:text-base',
+            'text-boldfont-serif mt-1 block text-center whitespace-nowrap',
+            stacked ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs',
             light ? 'text-navy' : 'text-slate-300',
           )}
         >
           {brand.title}
-          {/* In Arabic the title is already Arabic, so the second copy is hidden */}
-          <span className="">
+          <span>
             {' '}
             <span className="mx-1 text-gold" aria-hidden="true">
               •
             </span>{' '}
-            <b className="font-medium">{brand.titleAr}</b>
+            <b className="font-serif">{brand.titleAr}</b>
           </span>
         </small>
       </span>
