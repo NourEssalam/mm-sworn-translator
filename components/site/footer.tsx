@@ -3,7 +3,7 @@ import { Brand } from '@/components/site/brand';
 import { Container } from '@/components/site/container';
 import { Eyebrow } from '@/components/site/eyebrow';
 import type { Dictionary } from '@/dictionaries/en';
-import { MAPS_URL } from '@/lib/data';
+import { MAPS_URL, SOCIAL_LINKS as socialLinks } from '@/lib/data';
 
 export function Footer({
   t,
@@ -46,9 +46,16 @@ export function Footer({
             </p>
           </div>
           <div className="mt-5.5 flex gap-5 text-lg text-slate-300">
-            <a href="#">{t.socials.facebook}</a>
-            <a href="#">{t.socials.instagram}</a>
-            <a href="#">{t.socials.linkedin}</a>
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
         <div className="md:col-span-2 lg:col-span-1">
