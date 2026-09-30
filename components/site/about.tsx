@@ -46,7 +46,7 @@ export function About({
             ))}
           </ul>
 
-          <a
+          {/*<a
             className="inline-flex items-center gap-2 text-base text-yellow-700 hover:text-gold rtl:text-lg"
             href={WHATSAPP_URL}
             target="_blank"
@@ -54,7 +54,7 @@ export function About({
           >
             {common.viewCredentials}{' '}
             <ArrowRight size={16} className="rtl:rotate-180" />
-          </a>
+          </a>*/}
         </div>
       </Container>
     </Section>

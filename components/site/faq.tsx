@@ -9,8 +9,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import type { Dictionary } from '@/dictionaries/en';
-
-export function Faq({ t }: { t: Dictionary['faq'] }) {
+import { DirectionProvider } from '@base-ui/react/direction-provider';
+export function Faq({ t, dir }: { t: Dictionary['faq']; dir: 'rtl' | 'ltr' }) {
   return (
     <Section id="faq" className="bg-warm">
       <Container className="grid gap-10 md:grid-cols-5 md:gap-12">
@@ -23,22 +23,24 @@ export function Faq({ t }: { t: Dictionary['faq'] }) {
           </Heading>
           <Lede className="max-w-62">{t.lede}</Lede>
         </div>
-        <Accordion defaultValue={[0]} className="md:col-span-3">
-          {t.items.map(({ q, a }, i) => (
-            <AccordionItem
-              key={q}
-              value={i}
-              className="border-b border-stone-300"
-            >
-              <AccordionTrigger className="py-4.5 font-serif text-xl leading-snug font-normal text-navy hover:no-underline aria-expanded:**:data-[slot=accordion-trigger-icon]:text-gold rtl:font-arabic">
-                {q}
-              </AccordionTrigger>
-              <AccordionContent className="pe-7 pb-4 font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
-                {a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <DirectionProvider direction={dir}>
+          <Accordion defaultValue={[0]} className="md:col-span-3">
+            {t.items.map(({ q, a }, i) => (
+              <AccordionItem
+                key={q}
+                value={i}
+                className="border-b border-stone-300"
+              >
+                <AccordionTrigger className="py-4.5 font-serif text-xl leading-snug font-normal text-navy hover:no-underline aria-expanded:**:data-[slot=accordion-trigger-icon]:text-gold rtl:font-arabic">
+                  {q}
+                </AccordionTrigger>
+                <AccordionContent className="pe-7 pb-4 font-serif text-lg leading-relaxed text-slate-600 rtl:font-arabic">
+                  {a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </DirectionProvider>
       </Container>
     </Section>
   );

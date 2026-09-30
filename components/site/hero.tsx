@@ -12,22 +12,28 @@ export function Hero({
   t,
   common,
   imageLabel,
+  imageSrc,
 }: {
   t: Dictionary['hero'];
   common: Dictionary['common'];
   imageLabel: string;
+  imageSrc: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy text-white">
       <Container className="relative z-10">
         <div className="pt-13 pb-10 md:min-h-121 md:max-w-2xl md:pt-17 md:pb-16">
           <Eyebrow>{t.eyebrow}</Eyebrow>
-          <Heading as="h1" size="hero">
+          <Heading
+            as="h1"
+            size="hero"
+            className="rtl:text-4xl rtl:leading-[1.2] lg:rtl:text-6xl"
+          >
             {t.titleMain}
             <br />
             <Accent>{t.titleAccent}</Accent>
           </Heading>
-          <p className="mt-5 mb-4 max-w-120 font-serif text-xl leading-snug font-medium rtl:font-arabic rtl:leading-relaxed">
+          <p className="mt-5 mb-4 max-w-120 font-serif text-xl leading-snug font-medium rtl:font-arabic rtl:text-lg rtl:leading-relaxed">
             {t.description}
           </p>
           <div className="my-6 flex gap-6 font-serif text-lg leading-snug rtl:font-arabic rtl:leading-relaxed">
@@ -79,13 +85,13 @@ export function Hero({
         aria-label={imageLabel}
       >
         <Image
-          src="/hero1.png"
+          src={imageSrc}
           alt=""
           fill
           priority
           quality={90}
-          sizes="100vw"
-          className="object-cover"
+          sizes="90vw"
+          className="object-cover rtl:object-left"
         />
         <div className="absolute inset-x-0 top-0 h-12 bg-linear-to-b from-navy to-transparent md:hidden" />
         <div className="absolute inset-0 hidden bg-linear-to-r from-navy via-navy/80 to-navy/10 md:block rtl:bg-linear-to-l" />
