@@ -200,6 +200,8 @@ export const en = {
       region: 'Jendouba, Tunisia',
     },
     copyright: '© 2026 Monia Mhamdi. All rights reserved.',
+    // dictionaries/en.ts → inside `footer`
+    developedBy: 'Designed & developed by',
   },
 };
 

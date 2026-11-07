@@ -16,6 +16,8 @@ export const SOCIAL_LINKS = [
     url: 'https://www.instagram.com/monia.sworn.translator',
   },
 ];
+// TODO: replace with the real link
+export const DEVELOPER_URL = '#';
 
 // Same order as `services.items` in the dictionaries.
 export const serviceIcons = [FileText, Globe2, ShieldCheck, MessageCircle];

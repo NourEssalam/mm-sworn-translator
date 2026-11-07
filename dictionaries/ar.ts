@@ -202,5 +202,8 @@ export const ar: Dictionary = {
       region: 'جندوبة، تونس',
     },
     copyright: '© 2026 منية المحمدي. جميع الحقوق محفوظة.',
+
+    // dictionaries/ar.ts → inside `footer`
+    developedBy: 'تصميم وتطوير',
   },
 };

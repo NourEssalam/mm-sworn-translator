@@ -1,10 +1,13 @@
-import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
+import { ArrowRight, MapPin, MessageCircle, ArrowUpRight } from 'lucide-react';
 import { Brand } from '@/components/site/brand';
 import { Container } from '@/components/site/container';
 import { Eyebrow } from '@/components/site/eyebrow';
 import type { Dictionary } from '@/dictionaries/en';
-import { MAPS_URL, SOCIAL_LINKS as socialLinks } from '@/lib/data';
-
+import {
+  MAPS_URL,
+  SOCIAL_LINKS as socialLinks,
+  DEVELOPER_URL,
+} from '@/lib/data';
 export function Footer({
   t,
   common,
@@ -79,8 +82,26 @@ export function Footer({
         </div>
       </Container>
       <Container>
-        <div className="mt-9 border-t border-slate-700 py-4 text-base text-slate-400 md:mt-10 rtl:text-lg">
-          {t.copyright}
+        <div className="mt-9 flex flex-col gap-2 border-t border-slate-700 py-4 text-base text-slate-400 md:mt-10 md:flex-row md:items-center md:justify-between rtl:text-lg">
+          <p>{t.copyright}</p>
+          <p className="flex flex-wrap items-center gap-2">
+            {t.developedBy}
+            <a
+              href={DEVELOPER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/10 py-1 ps-4 pe-1 font-medium text-gold-bright transition-colors duration-300 hover:border-gold hover:bg-gold hover:text-navy-deep"
+            >
+              <span dir="ltr">Noor Slimen</span>
+              <span className="relative flex size-6 items-center justify-center rounded-full bg-gold text-navy-deep transition-colors duration-300 group-hover:bg-navy-deep group-hover:text-gold-bright">
+                <span className="absolute inset-0 rounded-full bg-gold/60 group-hover:animate-none motion-safe:animate-ping" />
+                <ArrowUpRight
+                  size={14}
+                  className="relative transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5"
+                />
+              </span>
+            </a>
+          </p>
         </div>
       </Container>
     </footer>
